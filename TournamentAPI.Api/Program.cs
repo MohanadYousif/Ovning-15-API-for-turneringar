@@ -1,4 +1,10 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TournamentAPI.Api.Extensions;
+using TournamentAPI.Data.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TournamentApiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TournamentAPIContext") ?? throw new InvalidOperationException("Connection string 'TournamentAPIContext' not found.")));
 
 // Add services to the container.
 
@@ -6,9 +12,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers(opt => opt.ReturnHttpNotAcceptable = true)
+    .AddNewtonsoftJson()
+    .AddXmlDataContractSerializerFormatters();
 
 var app = builder.Build();
-
+await app.SeedDataAsync();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

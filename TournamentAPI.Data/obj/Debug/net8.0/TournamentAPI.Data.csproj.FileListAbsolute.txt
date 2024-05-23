@@ -1,0 +1,16 @@
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\bin\Debug\net8.0\TournamentAPI.Data.deps.json
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\bin\Debug\net8.0\TournamentAPI.Data.dll
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\bin\Debug\net8.0\TournamentAPI.Data.pdb
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\bin\Debug\net8.0\TournamentAPI.Core.dll
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\bin\Debug\net8.0\TournamentAPI.Core.pdb
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.csproj.AssemblyReference.cache
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.AssemblyInfoInputs.cache
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.AssemblyInfo.cs
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.csproj.CoreCompileInputs.cache
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.sourcelink.json
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\Tourname.514BE939.Up2Date
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.dll
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\refint\TournamentAPI.Data.dll
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\TournamentAPI.Data.pdb
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Data\obj\Debug\net8.0\ref\TournamentAPI.Data.dll
