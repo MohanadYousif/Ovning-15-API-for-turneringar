@@ -259,3 +259,5 @@ C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\To
 C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Api\obj\Debug\net8.0\TournamentAPI.Api.genruntimeconfig.cache
 C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Api\obj\Debug\net8.0\ref\TournamentAPI.Api.dll
 C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Api\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Api\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\mohan\OneDrive\Desktop\Exercises\Övning 15 – API för turneringar\TournamentAPI.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

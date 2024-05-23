@@ -5,7 +5,7 @@ namespace TournamentAPI.Core.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public DateTime Time { get; set; }
+        public DateTime StartDate { get; set; }
         public int TournamentId { get; set; }
         public Tournament Tournament { get; set; }
     }

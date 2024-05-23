@@ -18,12 +18,12 @@ namespace TournamentAPI.Data.Data
                             new Game
                             {
                                 Title = "Match 1",
-                                Time = new DateTime(2024, 6, 1, 10, 0, 0)
+                                StartDate = new DateTime(2024, 6, 1, 10, 0, 0)
                             },
                             new Game
                             {
                                 Title = "Match 2",
-                                Time = new DateTime(2024, 6, 1, 14, 0, 0)
+                                StartDate = new DateTime(2024, 6, 1, 14, 0, 0)
                             }
                         }
                     },
@@ -36,12 +36,12 @@ namespace TournamentAPI.Data.Data
                             new Game
                             {
                                 Title = "Match 1",
-                                Time = new DateTime(2024, 7, 1, 10, 0, 0)
+                                StartDate = new DateTime(2024, 7, 1, 10, 0, 0)
                             },
                             new Game
                             {
                                 Title = "Match 2",
-                                Time = new DateTime(2024, 7, 1, 14, 0, 0)
+                                StartDate = new DateTime(2024, 7, 1, 14, 0, 0)
                             }
                         }
                     }

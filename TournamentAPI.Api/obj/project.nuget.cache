@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "achfbO3BnJw=",
+  "dgSpecHash": "x7Jxa1rH47s=",
   "success": true,
   "projectFilePath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI.Api\\TournamentAPI.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mohan\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\mohan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
