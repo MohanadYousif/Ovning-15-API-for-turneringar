@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rJrVRgTTp7Y=",
+  "dgSpecHash": "2BjfwCSBCFU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI\\TournamentAPI.csproj",
+  "projectFilePath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI.Api\\TournamentAPI.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\mohan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F73D7C18-9A75-4171-BC65-DEC86DE70DFA}|TournamentAPI.Api.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F73D7C18-9A75-4171-BC65-DEC86DE70DFA}|TournamentAPI.Api.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,6 +55,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-23T20:13:25.434Z",
+              "EditorCaption": ""
             }
           ]
         }

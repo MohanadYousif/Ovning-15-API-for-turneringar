@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI\\TournamentAPI.csproj",
-      "projectName": "TournamentAPI",
-      "projectPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI\\TournamentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI.Api\\TournamentAPI.Api.csproj",
+      "projectName": "TournamentAPI.Api",
+      "projectPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI.Api\\TournamentAPI.Api.csproj",
       "packagesPath": "C:\\Users\\mohan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI\\obj\\",
+      "outputPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 15 – API för turneringar\\TournamentAPI.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
