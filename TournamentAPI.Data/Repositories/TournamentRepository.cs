@@ -1,47 +1,48 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TournamentAPI.Core.Entities;
 using TournamentAPI.Core.IRepositories;
+using TournamentAPI.Data.Data;
 
 namespace TournamentAPI.Data.Repositories
 {
-    public  class TournamentRepository : ITournamentRepository
+    public  class TournamentRepository : IRepository<Tournament>
     {
 
-        private DbContext dbContext;
+        private readonly TournamentApiContext context;
 
-        public TournamentRepository(DbContext dbContext)
+        public TournamentRepository(TournamentApiContext context)
         {
-            this.dbContext = dbContext;
+            this.context = context;
         }
 
         public void Add(Tournament tournament)
         {
-            throw new NotImplementedException();
+            context.Add<Tournament>(tournament);
         }
 
-        public Task<bool> AnyAsync(int id)
+        public async Task<bool> AnyAsync(int id)
         {
-            throw new NotImplementedException();
+            return await context.Tournament.AnyAsync(g => g.Id == id);
         }
 
-        public Task<IEnumerable<Tournament>> GetAllAsync()
+        public async Task<IEnumerable<Tournament>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await context.Tournament.ToListAsync();
         }
 
-        public Task<Tournament> GetAsync(int id)
+        public async Task<Tournament> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            return await context.Tournament.FindAsync(id);
         }
 
         public void Remove(Tournament tournament)
         {
-            throw new NotImplementedException();
+            context.Remove<Tournament>(tournament);
         }
 
         public void Update(Tournament tournament)
         {
-            throw new NotImplementedException();
+            context.Entry(tournament).State = EntityState.Modified;
         }
     }
 }

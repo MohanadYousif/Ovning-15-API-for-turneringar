@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using TournamentAPI.Core.Dtos;
 using TournamentAPI.Core.Entities;
 using TournamentAPI.Core.IRepositories;
-using TournamentAPI.Data.Repositories;
 
 namespace TournamentAPI.Api.Controllers
 {
@@ -19,7 +18,7 @@ namespace TournamentAPI.Api.Controllers
         public TournamentsController(IUoW uow, IMapper mapper)
         {
             this.uow = uow;
-            this.mapper = mapper;  
+            this.mapper = mapper;
         }
 
         // GET: api/Tournaments
@@ -27,8 +26,13 @@ namespace TournamentAPI.Api.Controllers
         public async Task<ActionResult<IEnumerable<Tournament>>> GetTournament()
         {
             var tournaments = await uow.tournamentRepository.GetAllAsync();
-            var tournamentDtos = mapper.Map<IEnumerable<TournamentDto>>(tournaments);
-            return Ok(tournamentDtos);
+
+            if (tournaments == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(tournaments);
         }
 
         // GET: api/Tournaments/5
@@ -42,8 +46,7 @@ namespace TournamentAPI.Api.Controllers
                 return NotFound();
             }
 
-            var tournamentDto = mapper.Map<TournamentDto>(tournament);
-            return Ok(tournamentDto);
+            return Ok(tournament);
         }
 
         // PUT: api/Tournaments/5
@@ -51,12 +54,8 @@ namespace TournamentAPI.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTournament(int id, TournamentDto tournamentDto)
         {
-            if (id != tournamentDto.Id)
-            {
-                return BadRequest();
-            }
-
             var tournament = mapper.Map<Tournament>(tournamentDto);
+            tournament.Id = id;
             uow.tournamentRepository.Update(tournament);
 
             try
@@ -65,31 +64,31 @@ namespace TournamentAPI.Api.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TournamentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return (!TournamentExists(id)) ? NotFound() : StatusCode(500);
             }
 
             return NoContent();
         }
 
         // POST: api/Tournaments
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Tournament>> PostTournament(Tournament tournamentDto)
+        public async Task<ActionResult<Tournament>> PostTournament(TournamentDto tournamentDto)
         {
             var tournament = mapper.Map<Tournament>(tournamentDto);
             uow.tournamentRepository.Add(tournament);
-            await uow.CompleteAsync();
 
-            var createdTournamentDto = mapper.Map<TournamentDto>(tournament);
+            try
+            {
+                await uow.CompleteAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return StatusCode(500);
+            }
 
-            return CreatedAtAction(nameof(GetTournament), new { id = createdTournamentDto.Id }, createdTournamentDto);
+            //var createdTournamentDto = mapper.Map<TournamentDto>(tournament);
+
+            return CreatedAtAction(nameof(GetTournament), new {id = tournament.Id } ,tournament);
         }
 
         // DELETE: api/Tournaments/5
@@ -103,7 +102,14 @@ namespace TournamentAPI.Api.Controllers
             }
 
             uow.tournamentRepository.Remove(tournament);
-            await uow.CompleteAsync();
+            try
+            {
+                await uow.CompleteAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return (!TournamentExists(id)) ? NotFound() : StatusCode(500);
+            }
 
             return NoContent();
         }
@@ -140,14 +146,7 @@ namespace TournamentAPI.Api.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TournamentExists(tournamentId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return (!TournamentExists(tournamentId)) ? NotFound() : StatusCode(500);
             }
 
             return Ok(mapper.Map<TournamentDto>(tournament));

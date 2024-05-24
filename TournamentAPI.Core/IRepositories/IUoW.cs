@@ -1,9 +1,11 @@
-﻿namespace TournamentAPI.Core.IRepositories
+﻿using TournamentAPI.Core.Entities;
+
+namespace TournamentAPI.Core.IRepositories
 {
     public interface IUoW
     {
-        ITournamentRepository tournamentRepository { get; }
-        IGameRepository gameRepository { get; }
+        IRepository<Tournament> tournamentRepository { get; }
+        IRepository<Game> gameRepository { get; }
         Task CompleteAsync();
     }
 }

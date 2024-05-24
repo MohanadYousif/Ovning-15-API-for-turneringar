@@ -1,4 +1,5 @@
-﻿using TournamentAPI.Core.IRepositories;
+﻿using TournamentAPI.Core.Entities;
+using TournamentAPI.Core.IRepositories;
 using TournamentAPI.Data.Data;
 
 namespace TournamentAPI.Data.Repositories
@@ -15,9 +16,9 @@ namespace TournamentAPI.Data.Repositories
 
         }
 
-        public ITournamentRepository tournamentRepository { get; set; }
+        public IRepository<Tournament> tournamentRepository { get; set; }
 
-        public IGameRepository gameRepository { get; set; }
+        public IRepository<Game> gameRepository { get; set; }
 
         public async Task CompleteAsync()
         {

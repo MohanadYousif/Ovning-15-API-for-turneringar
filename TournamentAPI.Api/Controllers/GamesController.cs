@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TournamentAPI.Data.Data;
 using TournamentAPI.Core.Entities;
 using TournamentAPI.Core.IRepositories;
 using AutoMapper;
 using TournamentAPI.Core.Dtos;
-using TournamentAPI.Data.Repositories;
 using Microsoft.AspNetCore.JsonPatch;
 
 namespace TournamentAPI.Api.Controllers
@@ -25,11 +23,16 @@ namespace TournamentAPI.Api.Controllers
 
         // GET: api/Games
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Game>>> GetGame()
+        public async Task<ActionResult<IEnumerable<Game>>> GetAllGames()
         {
             var games = await uow.gameRepository.GetAllAsync();
-            var gameDtos = mapper.Map<IEnumerable<GameDto>>(games);
-            return Ok(gameDtos);
+
+            if (games == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(games);
         }
 
         // GET: api/Games/5
@@ -41,21 +44,16 @@ namespace TournamentAPI.Api.Controllers
             {
                 return NotFound();
             }
-            var gameDto = mapper.Map<GameDto>(game);
-            return Ok(gameDto);
+
+            return Ok(game);
         }
 
         // PUT: api/Games/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutGame(int id, GameDto gameDto)
         {
-            if (id != gameDto.Id)
-            {
-                return BadRequest();
-            }
-
             var game = mapper.Map<Game>(gameDto);
+            game.Id = id;
             uow.gameRepository.Update(game);
 
             try
@@ -64,31 +62,29 @@ namespace TournamentAPI.Api.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!GameExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return (!GameExists(id)) ? NotFound() : StatusCode(500);
             }
 
             return NoContent();
         }
 
         // POST: api/Games
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Game>> PostGame(GameDto gameDto)
         {
             var game = mapper.Map<Game>(gameDto);
             uow.gameRepository.Add(game);
-            await uow.CompleteAsync();
 
-            var createdGameDto = mapper.Map<GameDto>(game);
+            try
+            {
+                await uow.CompleteAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return StatusCode(500);
+            }
 
-            return CreatedAtAction(nameof(GetGame), new { id = createdGameDto.Id }, createdGameDto);
+            return CreatedAtAction(nameof(GetGame), new { id = game.Id }, game);
         }
 
         // DELETE: api/Games/5
@@ -102,20 +98,29 @@ namespace TournamentAPI.Api.Controllers
             }
 
             uow.gameRepository.Remove(game);
-            await uow.CompleteAsync();
+
+            try
+            {
+                await uow.CompleteAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+
+                return (!GameExists(id)) ? NotFound() : StatusCode(500);
+            }
 
             return NoContent();
         }
 
-        [HttpPatch("{gameId}")]
-        public async Task<ActionResult<GameDto>> PatchGame(int gameId, [FromBody] JsonPatchDocument<GameDto> patchDocument)
+        [HttpPatch("{id}")]
+        public async Task<ActionResult<GameDto>> PatchGame(int id, [FromBody] JsonPatchDocument<GameDto> patchDocument)
         {
             if (patchDocument == null)
             {
                 return BadRequest();
             }
 
-            var game = await uow.gameRepository.GetAsync(gameId);
+            var game = await uow.gameRepository.GetAsync(id);
             if (game == null)
             {
                 return NotFound();
@@ -138,14 +143,8 @@ namespace TournamentAPI.Api.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!GameExists(gameId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+
+                return (!GameExists(id)) ? NotFound() : StatusCode(500);
             }
 
             return Ok(mapper.Map<GameDto>(game));
