@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TournamentAPI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba2fb571f0cd6fb734d002d8c5af28abf5a46529")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bf1f047856302acc9e18a8f36b4743c3fdf8115")]
 [assembly: System.Reflection.AssemblyProductAttribute("TournamentAPI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TournamentAPI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

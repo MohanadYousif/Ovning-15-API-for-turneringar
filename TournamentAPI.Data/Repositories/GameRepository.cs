@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using TournamentAPI.Data.Data;
 using TournamentAPI.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using TournamentAPI.Core.IRepositories;
-using TournamentAPI.Data.Data;
 
 namespace TournamentAPI.Data.Repositories
 {
@@ -29,9 +29,19 @@ namespace TournamentAPI.Data.Repositories
             return await context.Game.ToListAsync();
         }
 
+        public Task<IEnumerable<Game>> GetAllAsync(bool includeTournament)
+        {
+            throw new NotImplementedException();
+        }        
+
         public async Task<Game> GetAsync(int id)
         {
             return await context.Game.FindAsync(id);
+        }
+
+        public Task<Game> GetAsync(string input)
+        {
+            return context.Game.FirstAsync(g => g.Title.Equals(input));
         }
 
         public void Remove(Game game)

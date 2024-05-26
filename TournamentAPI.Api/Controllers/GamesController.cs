@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TournamentAPI.Core.Entities;
-using TournamentAPI.Core.IRepositories;
-using AutoMapper;
+﻿using AutoMapper;
 using TournamentAPI.Core.Dtos;
+using Microsoft.AspNetCore.Mvc;
+using TournamentAPI.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.JsonPatch;
+using TournamentAPI.Core.IRepositories;
 
 namespace TournamentAPI.Api.Controllers
 {
@@ -23,7 +23,7 @@ namespace TournamentAPI.Api.Controllers
 
         // GET: api/Games
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Game>>> GetAllGames()
+        public async Task<ActionResult<IEnumerable<GameDto>>> GetAllGames()
         {
             var games = await uow.gameRepository.GetAllAsync();
 
@@ -32,20 +32,34 @@ namespace TournamentAPI.Api.Controllers
                 return NotFound();
             }
 
-            return Ok(games);
+            var gamesDto = mapper.Map<IEnumerable<GameDto>>(games);
+            return Ok(gamesDto);
         }
 
         // GET: api/Games/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Game>> GetGame(int id)
+        public async Task<ActionResult<GameDto>> GetGame(int id)
         {
             var game = await uow.gameRepository.GetAsync(id);
             if (game == null)
             {
                 return NotFound();
             }
+            GameDto gameDto = mapper.Map<GameDto>(game);
+            return Ok(gameDto);
+        }
 
-            return Ok(game);
+        // GET: api/Games/5
+        [HttpGet("title")]
+        public async Task<ActionResult<GameDto>> GetGameByTitle(string title)
+        {
+            var game = await uow.gameRepository.GetAsync(title);
+            if (game == null)
+            {
+                return NotFound();
+            }
+            GameDto gameDto = mapper.Map<GameDto>(game);
+            return Ok(gameDto);
         }
 
         // PUT: api/Games/5
@@ -53,7 +67,6 @@ namespace TournamentAPI.Api.Controllers
         public async Task<IActionResult> PutGame(int id, GameDto gameDto)
         {
             var game = mapper.Map<Game>(gameDto);
-            game.Id = id;
             uow.gameRepository.Update(game);
 
             try
@@ -70,7 +83,7 @@ namespace TournamentAPI.Api.Controllers
 
         // POST: api/Games
         [HttpPost]
-        public async Task<ActionResult<Game>> PostGame(GameDto gameDto)
+        public async Task<ActionResult<GameDto>> PostGame(GameDto gameDto)
         {
             var game = mapper.Map<Game>(gameDto);
             uow.gameRepository.Add(game);

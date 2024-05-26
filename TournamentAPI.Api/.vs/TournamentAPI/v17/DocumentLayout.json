@@ -3,18 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93265055-7EA5-4943-9D6C-411D2061E9F0}|..\\TournamentAPI.Core\\TournamentAPI.Core.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.core\\irepositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F73D7C18-9A75-4171-BC65-DEC86DE70DFA}|TournamentAPI.Api.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.api\\controllers\\tournamentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F73D7C18-9A75-4171-BC65-DEC86DE70DFA}|TournamentAPI.Api.csproj|solutionrelative:controllers\\tournamentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F73D7C18-9A75-4171-BC65-DEC86DE70DFA}|TournamentAPI.Api.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.api\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F73D7C18-9A75-4171-BC65-DEC86DE70DFA}|TournamentAPI.Api.csproj|solutionrelative:controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93265055-7EA5-4943-9D6C-411D2061E9F0}|..\\TournamentAPI.Core\\TournamentAPI.Core.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.core\\dtos\\tournamentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C9C34CA-302F-475B-96E0-6DA5C2DB0D27}|..\\TournamentAPI.Data\\TournamentAPI.Data.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.data\\repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9C34CA-302F-475B-96E0-6DA5C2DB0D27}|..\\TournamentAPI.Data\\TournamentAPI.Data.csproj|c:\\users\\mohan\\onedrive\\desktop\\exercises\\\u00F6vning 15 \u2013 api f\u00F6r turneringar\\tournamentapi.data\\data\\tournamentmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +20,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,54 +64,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GamesController.cs",
               "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\Controllers\\GamesController.cs",
               "RelativeDocumentMoniker": "Controllers\\GamesController.cs",
               "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\Controllers\\GamesController.cs",
               "RelativeToolTip": "Controllers\\GamesController.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAIwAAAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T12:08:44.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TournamentDto.cs",
-              "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Core\\Dtos\\TournamentDto.cs",
-              "RelativeDocumentMoniker": "..\\TournamentAPI.Core\\Dtos\\TournamentDto.cs",
-              "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Core\\Dtos\\TournamentDto.cs",
-              "RelativeToolTip": "..\\TournamentAPI.Core\\Dtos\\TournamentDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T12:08:02.712Z",
+              "WhenOpened": "2024-05-26T13:02:16.29Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TournamentsController.cs",
-              "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\Controllers\\TournamentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TournamentsController.cs",
-              "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Api\\Controllers\\TournamentsController.cs",
-              "RelativeToolTip": "Controllers\\TournamentsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAnAAAA",
+              "Title": "GameRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Data\\Repositories\\GameRepository.cs",
+              "RelativeDocumentMoniker": "..\\TournamentAPI.Data\\Repositories\\GameRepository.cs",
+              "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Data\\Repositories\\GameRepository.cs",
+              "RelativeToolTip": "..\\TournamentAPI.Data\\Repositories\\GameRepository.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCsAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T10:56:38.976Z",
+              "WhenOpened": "2024-05-26T12:57:15.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Core\\IRepositories\\IRepository.cs",
-              "RelativeDocumentMoniker": "..\\TournamentAPI.Core\\IRepositories\\IRepository.cs",
-              "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Core\\IRepositories\\IRepository.cs",
-              "RelativeToolTip": "..\\TournamentAPI.Core\\IRepositories\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "DocumentIndex": 2,
+              "Title": "TournamentMappings.cs",
+              "DocumentMoniker": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Data\\Data\\TournamentMappings.cs",
+              "RelativeDocumentMoniker": "..\\TournamentAPI.Data\\Data\\TournamentMappings.cs",
+              "ToolTip": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\\u00D6vning 15 \u2013 API f\u00F6r turneringar\\TournamentAPI.Data\\Data\\TournamentMappings.cs",
+              "RelativeToolTip": "..\\TournamentAPI.Data\\Data\\TournamentMappings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T11:00:05.701Z",
+              "WhenOpened": "2024-05-26T12:45:57.212Z",
               "EditorCaption": ""
             }
           ]
