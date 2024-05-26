@@ -1,0 +1,14 @@
+﻿
+using TournamentAPI.Core.Entities;
+
+namespace TournamentAPI.Core.Dtos
+{
+    public class TournamentDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate => StartDate.AddMonths(3);
+        public ICollection<GameDto> GamesDto { get; set; }
+    }
+}
